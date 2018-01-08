@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title></title>
+
+<style>
+#cloud { border-radius:3px;border:1px solid #d0d0d0; }
+#cloud span { cursor: pointer; }
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min"></script>
+<script src="scripts/custom.js">
+
+#json
+var = tags = [
+  ["xxx", 111],
+  ["yyy", 222],
+  ["zzz", 333]
+];
+
+
+var list = tags.map(function(word){
+  return [word[0], Math.round(word[1]/10000)];
+});
+
+
+var clicked = function(ev){
+  var details = "";
+  if (ev.target.nodeName === "SPAN"){
+    var tag = ev.target.textContent,
+      clickedTag;
+    if (tag.some(function(el){
+      if(el[0] === tag){
+        clickedTag = el;
+	return true;
+      }
+      return false;
+    })){
+      details = "There were " + clickedTag[1] +
+                "Stack Overflow questions tagged \"" + tag + "\"";
+    }
+  }
+  document.getElementById("details").innerText = details;
+}
+document.getElementById("cloud").addEventListener("click", clicked)
+
+</script>
+
+</head>
+
+
+</html>
