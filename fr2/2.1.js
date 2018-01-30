@@ -1,3 +1,14 @@
+var eas = [[],[],[]],...
+var esc = [[],[],[]],...
+var lcn = [[],[],[]],...
+
+
+
+$(function(){
+  $.plot($("#chart"), [eas, ecs, lcn, mea, sas, ssf]);
+});
+
+
 var source = [
   { data: eas, show: true, color: "#FE4C4C", name: "East Asia & Pacific"},
   { data: esc, show: true, color: "#B6ED47", name: "Europe & Central Asia"},
@@ -5,6 +16,10 @@ var source = [
   #...
 ];
 
+{
+  data: eas,
+  color: "#E41A1C"
+}
 
 $.grep(
   source,
