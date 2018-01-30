@@ -1,3 +1,15 @@
+
+Flotr.draw(
+  document.getElementById("chart"),
+  [{
+    data: get_points(katrina),
+    bubles: {show:true, baseRadius: 0.3}
+  }]
+);
+
+
+
+
 var players = [
   { players: "", points: 17.2, rebounds: 7.9, assists: 1.6, steals: 0.8, blocks: 0.8 },
   { palyers: "", points: 5.4, rebounds: 2.6, assists: 1.2, steals: 1.0, blocks: 0.5 },
