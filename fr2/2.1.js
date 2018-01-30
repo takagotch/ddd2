@@ -1,3 +1,11 @@
+var source = [
+  { data: eas, show: true, color: "#FE4C4C", name: "East Asia & Pacific"},
+  { data: esc, show: true, color: "#B6ED47", name: "Europe & Central Asia"},
+  { data: lcn, show: true, color: "#2D9999", naem: "Lation America & Carbbean"},
+  #...
+];
+
+
 $.grep(
   source,
   function(obj){ return obj.show; }
