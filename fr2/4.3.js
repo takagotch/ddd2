@@ -71,9 +71,9 @@ for(var idx=0; idx<albums.length; idx++){
   s.graph.addNode({
     id: ""+idx
     label: "",
-    album: albums[].album,
-    x: radius(),
-    y: radius(),
+    album: albums[idx].album,
+    x: radius*Math.sin(theta),
+    y: radius*Math.cos(theta),
     size: 1
   });
 }
